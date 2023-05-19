@@ -1,0 +1,27 @@
+//Escreva um programa que leia um vetor de 20 posições e escreva a posição de cada um dos elementos cujo valor seja igual a 10.
+#include <stdio.h>
+#include <math.h>
+
+#define TAM 20
+
+int main() {
+    
+    int vetor[TAM];
+    int i, contador = 0;
+
+    for(i = 0 ; i < TAM ; i++){
+    printf("escreva numero %i : " , i + 1);
+    scanf("%d",&vetor[i]);
+    }
+
+    printf("===============");
+
+    for(i = 0 ; i < TAM ; i++){
+        contador++;
+        if ( vetor[i] == 10 ){
+            printf("\n numero 10 encontrando no vetor[%i]" , contador );
+        }
+    }
+
+
+}
