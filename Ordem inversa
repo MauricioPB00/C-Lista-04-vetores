@@ -1,0 +1,23 @@
+//Faça um programa que leia a idade e a altura de 5 pessoas, armazene cada informação no seu respectivo vetor. Imprima a idade e a altura na ordem inversa a ordem lida
+#include <stdio.h>
+#include <math.h>
+
+#define N 5
+
+int main() {
+    int idade[N];
+    float altura[N];
+    int i;
+
+    for(i = 0 ; i < N ; i++){
+        printf("Pessoa %i - qual sua idade :", i + 1);
+        scanf("%i", &idade[i]);
+
+        printf("Pessoa %i - qual sua altura :", i + 1);
+        scanf("%f", &altura[i]);
+    }
+        printf("\n ==== " );
+    for ( i = N - 1 ; i >= 0 ; i--){
+        printf("\nPessoa %i : %i , %.2f", i + 1, idade[i], altura[i]);
+    }
+}
