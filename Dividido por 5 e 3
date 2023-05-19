@@ -1,0 +1,42 @@
+//Ler do teclado 12 números inteiros e armazená-los em um vetor N. Em seguida, copiar os elementos pares divisíveis por 3 para o vetor X e os ímpares divisíveis por 5 para o vetor Y.
+#include <stdio.h>
+#include <math.h>
+
+#define N 12
+
+int main() {
+
+    int vetor[N];
+    int xvetor[N];    
+    int yvetor[N];
+    int xaux = 0;
+    int yaux = 0;
+    int i;
+
+    for(i = 0 ; i < N ; i++){
+         printf("vetor[%i]: ", i);
+         scanf("%i", &vetor[i]);
+    }
+
+    for(i = 0; i < N ; i++){
+        if(vetor[i] % 2 == 0 && vetor[i] % 3 == 0){
+            xvetor[xaux] = vetor[i];
+            xaux++;
+        }
+    }
+
+    for(i = 0; i < N ; i++){
+        if(vetor[i] % 2 == 1 && vetor[i] % 5 == 0){
+            yvetor[yaux] = vetor[i];
+            yaux++;
+        }
+    }
+    printf("===================");
+     for(i = 0; i < xaux ; i++){
+         printf("\nvetor X [%i]: ", xvetor[i]);
+    }
+    printf("\n===================");
+         for(i = 0; i < yaux ; i++){
+         printf("\nvetor Y [%i]: ", yvetor[i]);
+    }
+}
